@@ -12,6 +12,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+@Entity
 public class User {
 
     @Id
