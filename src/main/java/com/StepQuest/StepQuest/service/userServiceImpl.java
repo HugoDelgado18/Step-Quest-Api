@@ -35,6 +35,12 @@ public class userServiceImpl implements userService {
     }
 
     @Override
+    public User getUserByUsername(String username) {
+        Optional<User> optionalUser = Optional.ofNullable(userRepository.findByUsername(username));
+        return optionalUser.orElse(null);
+    }
+
+    @Override
     public User createUser(User user) {
         // Perform any necessary validation or business logic
         // For example, check if the user already exists
