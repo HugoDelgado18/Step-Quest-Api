@@ -1,6 +1,5 @@
 package com.StepQuest.StepQuest.controller;
 
-import com.StepQuest.StepQuest.exceptions.userExceptions.userNotFoundException;
 import com.StepQuest.StepQuest.model.User;
 import com.StepQuest.StepQuest.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class userController {
     @Autowired
     private userService userService;
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> allUsers = userService.getAllUsers();
         return ResponseEntity.ok(allUsers);
