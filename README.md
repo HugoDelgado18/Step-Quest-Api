@@ -39,6 +39,10 @@ To run the StepQuest app locally, you'll need to have the following installed:
    spring.datasource.url=jdbc:mysql://localhost:3306/stepquestdb
    spring.datasource.username=<your_username>
    spring.datasource.password=<your_password>
+   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+   spring.datasource.initialization-mode=always
+   jwt.secret= // generate 256 authentication key   
 
 ## Running the Application
 
