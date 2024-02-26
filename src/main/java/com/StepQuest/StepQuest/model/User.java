@@ -25,9 +25,9 @@ public class User implements UserDetails {
     private String email;
     private String password;
 
-    private int totalSteps;
+    private int totalSteps = 0;
 
-    private int virtualCurrency;
+    private int virtualCurrency = 0;
 
     @Enumerated(EnumType.STRING)
     private Role role;
