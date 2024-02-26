@@ -25,9 +25,16 @@ public class User implements UserDetails {
     private String email;
     private String password;
 
+    private int level = 0;
+
+    private int experiencePoints = 0;
+
     private int totalSteps = 0;
 
     private int virtualCurrency = 0;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<StepDetails> stepDetails;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -66,4 +73,5 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true ;
     }
+
 }
