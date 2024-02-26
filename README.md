@@ -62,8 +62,8 @@ To run the StepQuest app locally, you'll need to have the following installed:
 
 - **GET /api/users**: Get all users.
 - **GET /api/users/{id}**: Get user by ID.
-- **POST /api/users/register**: Register a new user.
-- **POST /api/users/login**: Login as an existing user.
+- **POST /api/v1/auth/register**: Register a new user.
+- **POST /api/v1/auth/authenticate**: Login as an existing user.
 
 ## Contributing
 
